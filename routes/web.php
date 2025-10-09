@@ -9,3 +9,6 @@ Route::get('/', function () {
 
 
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
+
+Route::get('/patients/ajouter', [PatientController::class, 'add_patient'])->name('patients.add');
+Route::post('/patients/ajouter', [PatientController::class, 'store'])->name('patients.store');

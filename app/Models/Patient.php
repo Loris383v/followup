@@ -13,7 +13,13 @@ class Patient extends Model
         'dateNaissance',
         'ageDepistageSurdite',
         'agePremierImplant',
-        'ageDeuxiemeImplant'
+        'ageDeuxiemeImplant',
+        'idOrigineSurdite'
     ];
+
+    public function getOrigineSurdite()
+    {
+        return $this->belongsTo(OrigineSurdite::class, 'idOrigineSurdite');
+    }
 
 }

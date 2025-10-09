@@ -1,3 +1,8 @@
 <nav class="Menu">
-    Ceci est un menu
+    <a href="{{ route('patients.index') }}">
+        Liste des patients
+    </a>
+    <a href="{{ route('patients.add') }}">
+        Ajouter un patient
+    </a>
 </nav>

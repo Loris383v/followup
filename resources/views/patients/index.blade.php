@@ -3,12 +3,13 @@
 @section('content')
 <table>
 <tr>
-<th>nom</th>
-<th>prenom</th>
-<th>dateNaissance</th>
-<th>ageDepistageSurdite</th>
-<th>agePremierImplant</th>
-<th>ageDeuxiemeImplant</th>
+    <th>nom</th>
+    <th>prenom</th>
+    <th>dateNaissance</th>
+    <th>ageDepistageSurdite</th>
+    <th>agePremierImplant</th>
+    <th>ageDeuxiemeImplant</th>
+    <th>origineSurdite</th>
 </tr>
 @forelse ($patients as $patient)
 
@@ -19,6 +20,7 @@
         <td>{{$patient->ageDepistageSurdite}}</td>
         <td>{{$patient->agePremierImplant}}</td>
         <td>{{$patient->ageDeuxiemeImplant}}</td>
+        <td>{{$patient->getOrigineSurdite->natureSurdite ?? 'Non renseigné'}}</td>
     </tr>
 @empty
     <tr>
